@@ -1,11 +1,10 @@
-
+from config.views import ConfigViewSet
+from config.views import RateViewSet
 from django.urls import include
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
-
-from config.views import ConfigViewSet, RateViewSet
 
 router = DefaultRouter()
 router.register(r"config", ConfigViewSet)
