@@ -1,10 +1,7 @@
-amqp
-celery
 coreapi
 Django
 djangorestframework
 djangorestframework-simplejwt
-psycopg2
-httpx
 drf-spectacular
+psycopg2
 python-dotenv
