@@ -31,9 +31,10 @@ services:
   celery_api:
     build:
       context: ./api
+    command: celery -A api_service.celery worker --loglevel=info
     depends_on:
-      - api
-    command: ["bash", "run_celery.sh"]
+      - db
+      - rabbitmq
 
 
   core:
