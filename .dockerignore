@@ -1,8 +1,0 @@
-.cache
-.tox
-.tx
-__pycache__
-*.pyc
-*.pid
-*.log
-.snaplet/snapshots

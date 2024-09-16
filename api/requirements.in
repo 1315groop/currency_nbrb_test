@@ -1,7 +1,10 @@
 coreapi
+celery
+celery-pubsub
 Django
 djangorestframework
 djangorestframework-simplejwt
 drf-spectacular
+pika
 psycopg2
 python-dotenv

@@ -1,0 +1,4 @@
+celery
+celery-pubsub
+pika
+amqp
