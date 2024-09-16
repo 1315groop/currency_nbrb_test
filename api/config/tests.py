@@ -80,3 +80,20 @@ class RateViewSetTests(APITestCase):
         self.assertEqual(rate.currency_unit, 1)
         self.assertEqual(rate.currency_name, "Euro")
         self.assertEqual(rate.currency_exchange_rate, 0.85)
+
+
+class UserRegistrationTests(APITestCase):
+    def setUp(self):
+        self.url = reverse("user_registration")
+
+    def test_register_user(self):
+        data = {
+            "username": "newuser",
+            "password": "newpassword",
+            "email": "newuser@example.com",
+        }
+        response = self.client.post(self.url, data, format="json")
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(User.objects.count(), 1)
+        user = User.objects.get(username="newuser")
+        self.assertEqual(user.email, "newuser@example.com")
